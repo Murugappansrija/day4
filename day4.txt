@@ -1,0 +1,47 @@
+let obj1 = {
+  " Name" : "vijay",
+   "age" : "5"
+}
+
+let obj2 = {
+   
+   "age" : "5",
+   "Name" : "ajith"
+   
+}
+if(JSON.stringify (obj1) === JSON.stringify(obj2)){
+console.log("true")
+}
+ else{
+   console.log("false")
+ }
+
+2)print a flag in a country
+
+var request=new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v2/all");
+request.send();
+request.onload=function(){
+var result=JSON.parse(request.response);
+for (var flag of result){
+   console.log(flag.flags.png)
+
+}
+
+}
+
+3)print country name,subregion,region,population
+
+
+var request=new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v2/all");
+request.send();
+request.onload=function(){
+var result=JSON.parse(request.response);
+for(var details of result){
+console.log(`name of country:${details.name}`)
+console.log(`region:${details.region}`)
+console.log(`subregion:${details.subregion}`)
+console.log(`population of country:${details.population}`)
+}
+}
